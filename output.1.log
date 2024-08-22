@@ -1,0 +1,48 @@
+Running phase: unpackPhase
+@nix { "action": "setPhase", "phase": "unpackPhase" }
+unpacking source archive /nix/store/ihn5sv0v4qxkp59z153zry0dp0wa56j9-source
+source root is source
+Running phase: patchPhase
+@nix { "action": "setPhase", "phase": "patchPhase" }
+Executing configureCargoCommonVars
+decompressing cargo artifacts from /nix/store/adi5imyv348x3bnpls3zkrida3ypik28-crane-rebuild-deps-0.1.0/target.tar.zst to target
+Running phase: updateAutotoolsGnuConfigScriptsPhase
+@nix { "action": "setPhase", "phase": "updateAutotoolsGnuConfigScriptsPhase" }
+Running phase: configurePhase
+@nix { "action": "setPhase", "phase": "configurePhase" }
+will append /build/source/.cargo-home/config.toml with contents of /nix/store/w67qidc3sp0maavbgcy4i1dg5sfqpix0-vendor-cargo-deps/config.toml
+default configurePhase, nothing to do
+Running phase: buildPhase
+@nix { "action": "setPhase", "phase": "buildPhase" }
+++ command cargo --version
+cargo 1.80.1 (376290515 2024-07-16)
+++ command cargo build --release --message-format json-render-diagnostics --locked -vvv
+[1m[32m       Fresh[0m pkg-config v0.3.30
+[1m[32m       Dirty[0m alsa-sys v0.3.1: the env variable PKG_CONFIG_PATH changed
+[1m[32m   Compiling[0m alsa-sys v0.3.1
+[1m[32m       Fresh[0m libc v0.2.158
+[1m[32m     Running[0m `CARGO=/nix/store/rrhg94vjf3ghj2v9y9w1lfn3m16kkc4q-cargo-1.80.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CFG_PANIC=unwind CARGO_CFG_TARGET_ABI='' CARGO_CFG_TARGET_ARCH=x86_64 CARGO_CFG_TARGET_ENDIAN=little CARGO_CFG_TARGET_ENV=gnu CARGO_CFG_TARGET_FAMILY=unix CARGO_CFG_TARGET_FEATURE=fxsr,sse,sse2 CARGO_CFG_TARGET_HAS_ATOMIC=16,32,64,8,ptr CARGO_CFG_TARGET_OS=linux CARGO_CFG_TARGET_POINTER_WIDTH=64 CARGO_CFG_TARGET_VENDOR=unknown CARGO_CFG_UNIX='' CARGO_ENCODED_RUSTFLAGS='' CARGO_MANIFEST_DIR=/nix/store/w67qidc3sp0maavbgcy4i1dg5sfqpix0-vendor-cargo-deps/c19b7c6f923b580ac259164a89f2577984ad5ab09ee9d583b888f934adbbe8d0/alsa-sys-0.3.1 CARGO_MANIFEST_LINKS=alsa CARGO_PKG_AUTHORS='Pierre Krieger <pierre.krieger1708@gmail.com>:David Henningsson <coding@diwic.se>' CARGO_PKG_DESCRIPTION='FFI bindings for the ALSA project (Advanced Linux Sound Architecture)' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE=MIT CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=alsa-sys CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/diwic/alsa-sys' CARGO_PKG_RUST_VERSION='' CARGO_PKG_VERSION=0.3.1 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=3 CARGO_PKG_VERSION_PATCH=1 CARGO_PKG_VERSION_PRE='' DEBUG=false HOST=x86_64-unknown-linux-gnu LD_LIBRARY_PATH='/build/source/target/release/deps:/build/source/target/release:/nix/store/1vxkgr9m7pwx9arzi856jnxrir26r8nw-rust-default-1.80.1/lib/rustlib/x86_64-unknown-linux-gnu/lib' NUM_JOBS=16 OPT_LEVEL=3 OUT_DIR=/build/source/target/release/build/alsa-sys-869e77fd4abad563/out PROFILE=release RUSTC=rustc RUSTDOC=rustdoc TARGET=x86_64-unknown-linux-gnu /build/source/target/release/build/alsa-sys-4b5c77903c682eec/build-script-build`
+[1m[32m     Running[0m `CARGO=/nix/store/rrhg94vjf3ghj2v9y9w1lfn3m16kkc4q-cargo-1.80.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=alsa_sys CARGO_MANIFEST_DIR=/nix/store/w67qidc3sp0maavbgcy4i1dg5sfqpix0-vendor-cargo-deps/c19b7c6f923b580ac259164a89f2577984ad5ab09ee9d583b888f934adbbe8d0/alsa-sys-0.3.1 CARGO_PKG_AUTHORS='Pierre Krieger <pierre.krieger1708@gmail.com>:David Henningsson <coding@diwic.se>' CARGO_PKG_DESCRIPTION='FFI bindings for the ALSA project (Advanced Linux Sound Architecture)' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE=MIT CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=alsa-sys CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/diwic/alsa-sys' CARGO_PKG_RUST_VERSION='' CARGO_PKG_VERSION=0.3.1 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=3 CARGO_PKG_VERSION_PATCH=1 CARGO_PKG_VERSION_PRE='' LD_LIBRARY_PATH=/build/source/target/release/deps OUT_DIR=/build/source/target/release/build/alsa-sys-869e77fd4abad563/out rustc --crate-name alsa_sys --edition=2018 /nix/store/w67qidc3sp0maavbgcy4i1dg5sfqpix0-vendor-cargo-deps/c19b7c6f923b580ac259164a89f2577984ad5ab09ee9d583b888f934adbbe8d0/alsa-sys-0.3.1/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C opt-level=3 -C embed-bitcode=no --check-cfg 'cfg(docsrs)' --check-cfg 'cfg(feature, values())' -C metadata=745dceb94ebc893f -C extra-filename=-745dceb94ebc893f --out-dir /build/source/target/release/deps -C strip=debuginfo -L dependency=/build/source/target/release/deps --extern libc=/build/source/target/release/deps/liblibc-f8558ac8830a0895.rmeta --cap-lints warn -L native=/nix/store/dawm9mrlzm3b2vc30awfs19lbsiy96zq-alsa-lib-1.2.11/lib -l asound`
+[1m[32m   Compiling[0m crane-rebuild v0.1.0 (/build/source)
+[1m[32m     Running[0m `CARGO=/nix/store/rrhg94vjf3ghj2v9y9w1lfn3m16kkc4q-cargo-1.80.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_BIN_NAME=crane-rebuild CARGO_CRATE_NAME=crane_rebuild CARGO_MANIFEST_DIR=/build/source CARGO_PKG_AUTHORS='' CARGO_PKG_DESCRIPTION='' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=crane-rebuild CARGO_PKG_README='' CARGO_PKG_REPOSITORY='' CARGO_PKG_RUST_VERSION='' CARGO_PKG_VERSION=0.1.0 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=1 CARGO_PKG_VERSION_PATCH=0 CARGO_PKG_VERSION_PRE='' CARGO_PRIMARY_PACKAGE=1 LD_LIBRARY_PATH=/build/source/target/release/deps rustc --crate-name crane_rebuild --edition=2021 src/main.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C opt-level=3 -C embed-bitcode=no --check-cfg 'cfg(docsrs)' --check-cfg 'cfg(feature, values())' -C metadata=20f1de55b8c10f1f -C extra-filename=-20f1de55b8c10f1f --out-dir /build/source/target/release/deps -C strip=debuginfo -L dependency=/build/source/target/release/deps --extern alsa_sys=/build/source/target/release/deps/libalsa_sys-745dceb94ebc893f.rlib -L native=/nix/store/dawm9mrlzm3b2vc30awfs19lbsiy96zq-alsa-lib-1.2.11/lib`
+[1m[32m    Finished[0m `release` profile [optimized] target(s) in 0.84s
+Running phase: checkPhase
+@nix { "action": "setPhase", "phase": "checkPhase" }
+/nix/store/q80b284avcya8vrwks9qlcfgkyb5wvca-alsa-lib-1.2.11-dev/lib/pkgconfig:/nix/store/hs3z0qj7vixfynv0337dx23rq8jyfiwx-jq-1.7.1-dev/lib/pkgconfig:/nix/store/5pka8lh8h9myxkxpw23cm3bvlqawb6zd-zstd-1.5.6-dev/lib/pkgconfig --locked -vvv
+Running phase: installPhase
+@nix { "action": "setPhase", "phase": "installPhase" }
+searching for bins/libs to install from cargo build log at cargoBuildLogEyOW.json
+installing /build/source/target/release/crane-rebuild
+searching for bins/libs complete
+stripping references to cargoVendorDir from:
+/nix/store/kb51yp7r9hczf29gjcndkislb6cqrihx-crane-rebuild-0.1.0/bin/crane-rebuild
+stripping references done
+linking previous artifacts /nix/store/adi5imyv348x3bnpls3zkrida3ypik28-crane-rebuild-deps-0.1.0/target.tar.zst to /nix/store/kb51yp7r9hczf29gjcndkislb6cqrihx-crane-rebuild-0.1.0/target.tar.zst
+                                                                               Read:     0   B  ==>  0%                                                                               /*stdin*\            : 21.62%   (  2.41 MiB =>    534 KiB, /nix/store/kb51yp7r9hczf29gjcndkislb6cqrihx-crane-rebuild-0.1.0/target.tar.zst) 
+Running phase: fixupPhase
+@nix { "action": "setPhase", "phase": "fixupPhase" }
+shrinking RPATHs of ELF executables and libraries in /nix/store/kb51yp7r9hczf29gjcndkislb6cqrihx-crane-rebuild-0.1.0
+shrinking /nix/store/kb51yp7r9hczf29gjcndkislb6cqrihx-crane-rebuild-0.1.0/bin/crane-rebuild
+checking for references to /build/ in /nix/store/kb51yp7r9hczf29gjcndkislb6cqrihx-crane-rebuild-0.1.0...
+patching script interpreter paths in /nix/store/kb51yp7r9hczf29gjcndkislb6cqrihx-crane-rebuild-0.1.0
+stripping (with command strip and flags -S -p) in  /nix/store/kb51yp7r9hczf29gjcndkislb6cqrihx-crane-rebuild-0.1.0/bin
